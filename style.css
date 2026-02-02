@@ -60,6 +60,49 @@ button:focus {
   gap: 16px;
 }
 
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
+.nav-toggle-icon {
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  position: relative;
+  display: block;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  left: 0;
+  transition: transform 0.2s ease;
+}
+
+.nav-toggle-icon::before {
+  transform: translateY(-6px);
+}
+
+.nav-toggle-icon::after {
+  transform: translateY(6px);
+}
+
+.nav-menu {
+  display: flex;
+}
+
 .brand {
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -192,6 +235,10 @@ main {
   margin-top: 12px;
 }
 
+.hero-actions {
+  margin-top: 8px;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -234,6 +281,21 @@ main {
 .timeline {
   display: grid;
   gap: 24px;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.experience-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface);
 }
 
 .experience-link {
@@ -353,6 +415,21 @@ main {
   background: rgba(192, 115, 90, 0.08);
 }
 
+.leadership-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.leadership-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
 .leadership-card h4 {
   margin-top: 16px;
 }
@@ -377,6 +454,35 @@ main {
 
 .hobby-icon {
   font-size: 1.5rem;
+}
+
+.education-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.education-card {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.education-program {
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.education-duration {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.education-notes {
+  margin-top: 12px;
+  color: var(--muted);
 }
 
 .timeline-item {
@@ -518,26 +624,88 @@ main {
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .education-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 960px) {
   .skills-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .education-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 64px;
+    right: 16px;
+    left: 16px;
+    background: var(--surface);
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 24px rgba(31, 31, 31, 0.08);
+    padding: 12px;
+    display: none;
+    z-index: 20;
+  }
+
+  .nav-menu.is-open {
+    display: block;
+  }
+
   .nav-links {
-    gap: 6px;
+    gap: 0;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .nav-links a {
-    padding: 6px 10px;
+    padding: 12px 14px;
   }
 
   .project-toggle,
   .hero-actions a {
     min-height: 44px;
+  }
+
+  .profile-grid {
+    justify-items: center;
+    text-align: left;
+  }
+
+  .profile-photo {
+    max-width: 180px;
+  }
+
+  .profile-content .intro {
+    margin-top: 16px;
+  }
+
+  .typewriter {
+    margin-top: 12px;
+  }
+
+  .hero-actions {
+    margin-top: 16px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leadership-header {
+    align-items: flex-start;
   }
 }
 
@@ -551,4 +719,15 @@ main {
     opacity: 1;
     transform: none;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

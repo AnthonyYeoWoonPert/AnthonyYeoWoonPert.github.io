@@ -22,16 +22,22 @@
     <header class="site-header">
       <nav class="navbar">
         <div class="brand">AYWP</div>
-        <ul class="nav-links">
-          <li><a href="#about" data-section="about">Profile</a></li>
-          <li><a href="#experience" data-section="experience">Experience</a></li>
-          <li><a href="#projects" data-section="projects">Deep Dives</a></li>
-          <li><a href="#leadership" data-section="leadership">Leadership</a></li>
-          <li><a href="#hobbies" data-section="hobbies">Hobbies</a></li>
-          <li><a href="#skills" data-section="skills">Skills</a></li>
-          <li><a href="#education" data-section="education">Education</a></li>
-          <li><a href="#contact" data-section="contact">Contact</a></li>
-        </ul>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#about" data-section="about">Profile</a></li>
+            <li><a href="#experience" data-section="experience">Experience</a></li>
+            <li><a href="#projects" data-section="projects">Deep Dives</a></li>
+            <li><a href="#leadership" data-section="leadership">Leadership</a></li>
+            <li><a href="#hobbies" data-section="hobbies">Hobbies</a></li>
+            <li><a href="#skills" data-section="skills">Skills</a></li>
+            <li><a href="#education" data-section="education">Education</a></li>
+            <li><a href="#contact" data-section="contact">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -89,7 +95,7 @@
           <h2>Education</h2>
           <p>Academic foundations and continual learning.</p>
         </div>
-        <div class="timeline" id="education-list"></div>
+        <div class="education-grid" id="education-list"></div>
       </section>
 
       <section class="section contact reveal" id="contact">

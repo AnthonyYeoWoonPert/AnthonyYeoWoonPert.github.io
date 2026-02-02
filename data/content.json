@@ -25,6 +25,8 @@
         "Translated risk feedback into structured dashboards for quicker triage.",
         "Improved deployment reliability through safer environment parity."
       ],
+      "logo": "",
+      "logoAlt": "Phillip Capital logo",
       "tech": [".NET", "C#", "SQL Server", "Azure DevOps"],
       "projectLink": "project-phillip",
       "linkLabel": "See how I built this"
@@ -39,6 +41,8 @@
         "Reduced layout complexity to improve mobile performance.",
         "Documented deployment steps for smoother client handover."
       ],
+      "logo": "",
+      "logoAlt": "Cyber Village logo",
       "tech": ["React", "JavaScript", "HTML & CSS", "Figma"],
       "projectLink": "project-cyber",
       "linkLabel": "View related projects"
@@ -139,6 +143,8 @@
       "title": "President",
       "organization": "APU Toastmasters Club",
       "description": "A public speaking and leadership club focused on helping members grow confidence and communication skills.",
+      "logo": "image/toastmaster.png",
+      "logoAlt": "APU Toastmasters Club logo",
       "actions": [
         "Planned meeting agendas, speaker rotations, and mentoring sessions.",
         "Facilitated evaluations to build a culture of constructive feedback."
@@ -149,6 +155,8 @@
       "title": "Co-founder",
       "organization": "APU Cruiser Club",
       "description": "A student initiative that connects riders for safe, organized community rides and campus events.",
+      "logo": "",
+      "logoAlt": "APU Cruiser Club logo",
       "actions": [
         "Organized route planning, safety guidelines, and onboarding sessions.",
         "Coordinated campus events and collaborated with student groups."
@@ -201,13 +209,22 @@
       "school": "Asia Pacific University",
       "program": "BSc in Information Technology (Fintech)",
       "duration": "2021 — 2024",
-      "description": "Focused on software engineering, data systems, and financial technology."
+      "description": "Focused on software engineering, data systems, and financial technology.",
+      "notes": ["Graduated with a strong focus on full-stack delivery and fintech systems."]
     },
     {
       "school": "Asia Pacific University",
-      "program": "BSc in Information Technology (Fintech)",
-      "duration": "2021 — 2024",
-      "description": "Focused on software engineering, data systems, and financial technology."
+      "program": "Foundation in Computing",
+      "duration": "2020 — 2021",
+      "description": "Built core programming foundations and problem-solving habits.",
+      "notes": ["Introduced to Java, Python, and structured problem decomposition."]
+    },
+    {
+      "school": "SMK Kuching High",
+      "program": "Secondary School (SPM)",
+      "duration": "2015 — 2019",
+      "description": "Completed secondary education with strong academic results.",
+      "notes": ["Graduated with a focus on science and mathematics."]
     }
   ],
   "contact": {

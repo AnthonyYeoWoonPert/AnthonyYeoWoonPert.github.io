@@ -61,9 +61,12 @@ const buildExperience = (experience) => {
     const article = document.createElement("article");
     article.className = "timeline-item";
     article.innerHTML = `
-      <div class="timeline-meta">
-        <h3>${role.title}</h3>
-        <span>${role.company} · ${role.duration}</span>
+      <div class="experience-header">
+        ${role.logo ? `<img class="experience-logo" src="${role.logo}" alt="${role.logoAlt}">` : ""}
+        <div class="timeline-meta">
+          <h3>${role.title}</h3>
+          <span>${role.company} · ${role.duration}</span>
+        </div>
       </div>
       <p class="timeline-body">${role.description}</p>
     `;
@@ -163,13 +166,18 @@ const buildLeadership = (leadership) => {
     const card = document.createElement("article");
     card.className = "leadership-card";
     card.innerHTML = `
-      <h3>${item.title}</h3>
-      <p class="muted">${item.organization}</p>
+      <div class="leadership-header">
+        ${item.logo ? `<img class="leadership-logo" src="${item.logo}" alt="${item.logoAlt}">` : ""}
+        <div>
+          <h3>${item.title}</h3>
+          <p class="muted">${item.organization}</p>
+        </div>
+      </div>
       <p>${item.description}</p>
       <h4>What I did</h4>
       ${createList(item.actions).outerHTML}
       <h4>Skills demonstrated</h4>
-      ${createList(item.skills).outerHTML}
+      ${createTagRow(item.skills).outerHTML}
     `;
     container.appendChild(card);
   });
@@ -216,14 +224,16 @@ const buildEducation = (education) => {
 
   education.forEach((item) => {
     const article = document.createElement("article");
-    article.className = "timeline-item";
+    article.className = "education-card";
     article.innerHTML = `
-      <div class="timeline-meta">
-        <h3>${item.school}</h3>
-        <span>${item.program} · ${item.duration}</span>
-      </div>
-      <p class="timeline-body">${item.description}</p>
+      <h3>${item.school}</h3>
+      <p class="education-program">${item.program}</p>
+      <span class="education-duration">${item.duration}</span>
+      <p class="education-notes">${item.description}</p>
     `;
+    if (item.notes?.length) {
+      article.appendChild(createList(item.notes));
+    }
     container.appendChild(article);
   });
 };
@@ -327,6 +337,52 @@ const initProjectToggles = () => {
   });
 };
 
+const initNavToggle = () => {
+  const navMenu = document.getElementById("nav-menu");
+  const navToggle = document.querySelector(".nav-toggle");
+  if (!navMenu || !navToggle) return;
+
+  const closeMenu = () => {
+    navMenu.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  };
+
+  const openMenu = () => {
+    navMenu.classList.add("is-open");
+    navToggle.setAttribute("aria-expanded", "true");
+  };
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  navMenu.addEventListener("click", (event) => {
+    const target = event.target.closest("a");
+    if (target) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!navMenu.classList.contains("is-open")) return;
+    const isClickInside = navMenu.contains(event.target) || navToggle.contains(event.target);
+    if (!isClickInside) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+};
+
 const initData = async () => {
   const response = await fetch("data/content.json");
   const data = await response.json();
@@ -343,6 +399,7 @@ const initData = async () => {
   initTypewriter(data.profile.phrases);
   initProjectToggles();
   initReveal();
+  initNavToggle();
 };
 
 initData();
