@@ -1,0 +1,236 @@
+{
+  "profile": {
+    "name": "Anthony Yeo Woon Pert",
+    "role": "Software Engineer · Full-stack (.NET)",
+    "summary": "I am a software engineer who builds reliable, maintainable systems used in real business environments. I specialize in .NET backends and thoughtful front-end experiences that keep teams moving with clarity. I enjoy translating complex requirements into clean, working solutions that respect performance and long-term support. Beyond code, I lead teams, mentor peers, and communicate with empathy to align stakeholders.",
+    "phrases": [
+      "reliable trading systems",
+      "clean data pipelines",
+      "frontend clarity",
+      "operational resilience"
+    ],
+    "photo": "image/face.png",
+    "photoAlt": "Portrait of Anthony Yeo Woon Pert",
+    "ctaPrimary": "Start a conversation",
+    "ctaSecondary": "Explore deep dives"
+  },
+  "experience": [
+    {
+      "title": "Software Engineer (Full-stack)",
+      "company": "Phillip Capital",
+      "duration": "2023 — Present",
+      "description": "Build internal trading and operations systems that reduce manual reconciliation and improve decision speed. Partner with analysts and operations leads to model workflows into dependable .NET services and data-driven interfaces.",
+      "highlights": [
+        "Modernized reporting workflows to shorten daily close-out cycles.",
+        "Translated risk feedback into structured dashboards for quicker triage.",
+        "Improved deployment reliability through safer environment parity."
+      ],
+      "logo": "",
+      "logoAlt": "Phillip Capital logo",
+      "tech": [".NET", "C#", "SQL Server", "Azure DevOps"],
+      "projectLink": "project-phillip",
+      "linkLabel": "See how I built this"
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "Cyber Village",
+      "duration": "2022 — 2023",
+      "description": "Supported client builds with responsive web development and rapid prototypes, keeping delivery lightweight and accessible. Worked with designers to maintain clarity and content-first layouts.",
+      "highlights": [
+        "Delivered reusable UI modules for content-heavy experiences.",
+        "Reduced layout complexity to improve mobile performance.",
+        "Documented deployment steps for smoother client handover."
+      ],
+      "logo": "",
+      "logoAlt": "Cyber Village logo",
+      "tech": ["React", "JavaScript", "HTML & CSS", "Figma"],
+      "projectLink": "project-cyber",
+      "linkLabel": "View related projects"
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-phillip",
+      "title": "Trading Operations Console",
+      "context": "Phillip Capital · Internal platform",
+      "overview": "A consolidated console that surfaces daily trading exceptions, reconciles incoming data, and provides an audit trail for finance and operations teams.",
+      "responsibilities": [
+        "Designed service boundaries for exception intake and reconciliation.",
+        "Built API endpoints and SQL procedures to power operational views.",
+        "Paired with analysts to validate data accuracy and workflow fit."
+      ],
+      "technical": [
+        "Event-driven ingestion to normalize trade inputs.",
+        "Role-based access with audit-friendly logging.",
+        "Performance tuning on SQL queries for daily batch loads."
+      ],
+      "diagrams": [
+        {
+          "title": "System architecture",
+          "svg": "<svg viewBox=\"0 0 360 160\" role=\"img\" aria-label=\"System architecture diagram\"><rect x=\"20\" y=\"20\" width=\"120\" height=\"40\" rx=\"8\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"80\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Trade Feeds</text><rect x=\"200\" y=\"20\" width=\"140\" height=\"40\" rx=\"8\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"270\" y=\"45\" text-anchor=\"middle\" font-size=\"12\">Ingestion API</text><rect x=\"200\" y=\"100\" width=\"140\" height=\"40\" rx=\"8\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"270\" y=\"125\" text-anchor=\"middle\" font-size=\"12\">Ops Console</text><path d=\"M140 40 H200\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><path d=\"M270 60 V100\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><defs><marker id=\"arrow\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6\" fill=\"#5f5f5f\"/></marker></defs></svg>"
+        },
+        {
+          "title": "Component flow",
+          "svg": "<svg viewBox=\"0 0 360 160\" role=\"img\" aria-label=\"Component flow diagram\"><rect x=\"20\" y=\"30\" width=\"90\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"65\" y=\"50\" text-anchor=\"middle\" font-size=\"12\">API</text><rect x=\"135\" y=\"30\" width=\"90\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"180\" y=\"50\" text-anchor=\"middle\" font-size=\"12\">Service</text><rect x=\"250\" y=\"30\" width=\"90\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"295\" y=\"50\" text-anchor=\"middle\" font-size=\"12\">SQL</text><rect x=\"135\" y=\"90\" width=\"90\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"180\" y=\"110\" text-anchor=\"middle\" font-size=\"12\">UI</text><path d=\"M110 45 H135\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow2)\"/><path d=\"M225 45 H250\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow2)\"/><path d=\"M180 60 V90\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow2)\"/><defs><marker id=\"arrow2\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6\" fill=\"#5f5f5f\"/></marker></defs></svg>"
+        },
+        {
+          "title": "Data flow",
+          "svg": "<svg viewBox=\"0 0 360 160\" role=\"img\" aria-label=\"Data flow diagram\"><circle cx=\"60\" cy=\"80\" r=\"28\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"60\" y=\"85\" text-anchor=\"middle\" font-size=\"12\">Input</text><circle cx=\"180\" cy=\"80\" r=\"28\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"180\" y=\"85\" text-anchor=\"middle\" font-size=\"12\">Rules</text><circle cx=\"300\" cy=\"80\" r=\"28\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"300\" y=\"85\" text-anchor=\"middle\" font-size=\"12\">Output</text><path d=\"M88 80 H152\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow3)\"/><path d=\"M208 80 H272\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow3)\"/><defs><marker id=\"arrow3\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6\" fill=\"#5f5f5f\"/></marker></defs></svg>"
+        }
+      ],
+      "decisions": [
+        "Chose SQL stored procedures for consistent reconciliation steps.",
+        "Implemented audit logging for compliance confidence.",
+        "Aligned UI metrics with operational KPIs to reduce context switching."
+      ],
+      "tradeoffs": [
+        "Kept the first release web-only to ship quickly for operations.",
+        "Limited customization to avoid overfitting early workflows."
+      ],
+      "improvements": [
+        "Introduce near-real-time alerts with streaming support.",
+        "Expand automated anomaly detection and escalation paths.",
+        "Add richer reporting exports for compliance teams."
+      ],
+      "tech": [".NET", "C#", "SQL Server", "Azure DevOps"]
+    },
+    {
+      "id": "project-cyber",
+      "title": "Client Experience Builder",
+      "context": "Cyber Village · Responsive web delivery",
+      "overview": "A set of reusable layouts and components that helped teams launch consistent, mobile-first marketing and collaboration pages.",
+      "responsibilities": [
+        "Converted Figma layouts into responsive React components.",
+        "Optimized asset delivery to improve load times on mobile.",
+        "Packaged layout patterns for client handover and reuse."
+      ],
+      "technical": [
+        "Component composition for consistent typography and spacing.",
+        "CSS optimization to avoid unnecessary layout thrashing.",
+        "Accessibility checks on navigation and content structure."
+      ],
+      "diagrams": [
+        {
+          "title": "Component hierarchy",
+          "svg": "<svg viewBox=\"0 0 360 160\" role=\"img\" aria-label=\"Component hierarchy diagram\"><rect x=\"130\" y=\"20\" width=\"100\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"180\" y=\"40\" text-anchor=\"middle\" font-size=\"12\">Page</text><rect x=\"60\" y=\"80\" width=\"100\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"110\" y=\"100\" text-anchor=\"middle\" font-size=\"12\">Hero</text><rect x=\"200\" y=\"80\" width=\"100\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"250\" y=\"100\" text-anchor=\"middle\" font-size=\"12\">Sections</text><path d=\"M180 50 V80\" stroke=\"#5f5f5f\" stroke-width=\"2\"/><path d=\"M160 50 L110 80\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow4)\"/><path d=\"M200 50 L250 80\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow4)\"/><defs><marker id=\"arrow4\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6\" fill=\"#5f5f5f\"/></marker></defs></svg>"
+        },
+        {
+          "title": "Delivery flow",
+          "svg": "<svg viewBox=\"0 0 360 160\" role=\"img\" aria-label=\"Delivery flow diagram\"><rect x=\"20\" y=\"60\" width=\"90\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"65\" y=\"80\" text-anchor=\"middle\" font-size=\"12\">Design</text><rect x=\"135\" y=\"60\" width=\"90\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"180\" y=\"80\" text-anchor=\"middle\" font-size=\"12\">Build</text><rect x=\"250\" y=\"60\" width=\"90\" height=\"30\" rx=\"6\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"295\" y=\"80\" text-anchor=\"middle\" font-size=\"12\">Launch</text><path d=\"M110 75 H135\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow5)\"/><path d=\"M225 75 H250\" stroke=\"#5f5f5f\" stroke-width=\"2\" marker-end=\"url(#arrow5)\"/><defs><marker id=\"arrow5\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6\" fill=\"#5f5f5f\"/></marker></defs></svg>"
+        },
+        {
+          "title": "Performance focus",
+          "svg": "<svg viewBox=\"0 0 360 160\" role=\"img\" aria-label=\"Performance focus diagram\"><rect x=\"30\" y=\"30\" width=\"300\" height=\"100\" rx=\"16\" fill=\"#f6f4f1\" stroke=\"#c0735a\"/><text x=\"180\" y=\"70\" text-anchor=\"middle\" font-size=\"12\">Faster load + fewer assets</text><text x=\"180\" y=\"90\" text-anchor=\"middle\" font-size=\"12\">= better user trust</text></svg>"
+        }
+      ],
+      "decisions": [
+        "Established typography and spacing tokens for consistency.",
+        "Prioritized mobile layouts first to avoid retrofitting later."
+      ],
+      "tradeoffs": [
+        "Limited animation usage to preserve performance on low-end devices.",
+        "Focused on reusable blocks instead of one-off bespoke sections."
+      ],
+      "improvements": [
+        "Add lightweight analytics for usage insights.",
+        "Document component usage with short video walkthroughs."
+      ],
+      "tech": ["React", "JavaScript", "CSS", "Figma"]
+    }
+  ],
+  "leadership": [
+    {
+      "title": "President",
+      "organization": "APU Toastmasters Club",
+      "description": "A public speaking and leadership club focused on helping members grow confidence and communication skills.",
+      "logo": "image/toastmaster.png",
+      "logoAlt": "APU Toastmasters Club logo",
+      "actions": [
+        "Planned meeting agendas, speaker rotations, and mentoring sessions.",
+        "Facilitated evaluations to build a culture of constructive feedback."
+      ],
+      "skills": ["Leadership", "Communication", "Mentoring", "Facilitation"]
+    },
+    {
+      "title": "Co-founder",
+      "organization": "APU Cruiser Club",
+      "description": "A student initiative that connects riders for safe, organized community rides and campus events.",
+      "logo": "",
+      "logoAlt": "APU Cruiser Club logo",
+      "actions": [
+        "Organized route planning, safety guidelines, and onboarding sessions.",
+        "Coordinated campus events and collaborated with student groups."
+      ],
+      "skills": ["Initiative", "Community building", "Event planning"]
+    }
+  ],
+  "hobbies": [
+    {
+      "icon": "🎤",
+      "title": "Public speaking",
+      "description": "Sharpening clarity and confidence through regular speaking practice."
+    },
+    {
+      "icon": "🤝",
+      "title": "Community involvement",
+      "description": "Volunteering time for student initiatives and campus events."
+    },
+    {
+      "icon": "🏃‍♂️",
+      "title": "Fitness & endurance",
+      "description": "Staying active to keep energy and focus consistent."
+    },
+    {
+      "icon": "📚",
+      "title": "Learning & growth",
+      "description": "Continuous learning through engineering articles and side projects."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Backend",
+      "items": [".NET / C#", "REST APIs", "Microservices", "Background jobs"]
+    },
+    {
+      "title": "Frontend",
+      "items": ["React", "HTML & CSS", "JavaScript", "Accessibility"]
+    },
+    {
+      "title": "Database",
+      "items": ["SQL Server", "PostgreSQL", "Query optimization", "Data modeling"]
+    },
+    {
+      "title": "Tools",
+      "items": ["Azure DevOps", "GitHub", "Docker", "CI/CD pipelines"]
+    }
+  ],
+  "education": [
+    {
+      "school": "Asia Pacific University",
+      "program": "BSc in Information Technology (Fintech)",
+      "duration": "2021 — 2024",
+      "description": "Focused on software engineering, data systems, and financial technology.",
+      "notes": ["Graduated with a strong focus on full-stack delivery and fintech systems."]
+    },
+    {
+      "school": "Asia Pacific University",
+      "program": "Foundation in Computing",
+      "duration": "2020 — 2021",
+      "description": "Built core programming foundations and problem-solving habits.",
+      "notes": ["Introduced to Java, Python, and structured problem decomposition."]
+    },
+    {
+      "school": "SMK Kuching High",
+      "program": "Secondary School (SPM)",
+      "duration": "2015 — 2019",
+      "description": "Completed secondary education with strong academic results.",
+      "notes": ["Graduated with a focus on science and mathematics."]
+    }
+  ],
+  "contact": {
+    "email": "anthony@example.com",
+    "linkedin": "linkedin.com/in/anthony-placeholder",
+    "location": "Kuala Lumpur, Malaysia",
+    "note": "Replace placeholders with your actual contact details."
+  }
+}
