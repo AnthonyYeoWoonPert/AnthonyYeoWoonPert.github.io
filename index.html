@@ -23,10 +23,11 @@
       <nav class="navbar">
         <div class="brand">AYWP</div>
         <ul class="nav-links">
-          <li><a href="#about" data-section="about">About</a></li>
+          <li><a href="#about" data-section="about">Profile</a></li>
           <li><a href="#experience" data-section="experience">Experience</a></li>
-          <li><a href="#projects" data-section="projects">Projects</a></li>
-          <li><a href="#mindset" data-section="mindset">How I Think</a></li>
+          <li><a href="#projects" data-section="projects">Deep Dives</a></li>
+          <li><a href="#leadership" data-section="leadership">Leadership</a></li>
+          <li><a href="#hobbies" data-section="hobbies">Hobbies</a></li>
           <li><a href="#skills" data-section="skills">Skills</a></li>
           <li><a href="#education" data-section="education">Education</a></li>
           <li><a href="#contact" data-section="contact">Contact</a></li>
@@ -35,198 +36,44 @@
     </header>
 
     <main>
-      <section class="hero reveal" id="about">
-        <p class="eyebrow">Software Engineer · .NET & Full-stack</p>
-        <h1>Anthony Yeo Woon Pert</h1>
-        <p class="intro">
-          I build calm, reliable software experiences for teams in finance and community
-          programs. I care about clean architecture, steady delivery, and making complex
-          systems easy to use.
-        </p>
-        <div class="typewriter" aria-live="polite">
-          <span>Focused on</span>
-          <span class="typewriter-text" data-phrases="reliable systems,clean data flows,thoughtful developer experience,performance-aware delivery">reliable systems</span>
+      <section class="section hero reveal" id="about">
+        <div class="section-heading">
+          <h2>Profile</h2>
+          <p>Professional, proof-driven snapshot of how I build and lead.</p>
         </div>
-        <div class="hero-actions">
-          <a class="primary" href="#contact">Start a conversation</a>
-          <a class="secondary" href="#projects">View projects</a>
-        </div>
+        <div class="profile-grid" id="profile"></div>
       </section>
 
       <section class="section reveal" id="experience">
         <div class="section-heading">
           <h2>Experience</h2>
-          <p>Story-driven highlights from roles across finance and tech communities.</p>
+          <p>Real roles connected directly to the projects and systems I delivered.</p>
         </div>
-
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <h3>Software Engineer (Full-stack)</h3>
-            <span>Phillip Capital · 2023 — Present</span>
-          </div>
-          <p class="timeline-body">
-            Focused on building internal platforms that streamline trading operations and
-            reduce manual reconciliation. Partnered with analysts to translate complex
-            workflows into dependable .NET services and intuitive interfaces.
-          </p>
-          <ul class="timeline-highlights">
-            <li>Modernized reporting pipelines to shorten daily close-out cycles.</li>
-            <li>Collaborated with risk teams to surface actionable data insights.</li>
-            <li>Improved deployment reliability with clearer environment parity.</li>
-          </ul>
-          <div class="tag-row">
-            <span>.NET</span>
-            <span>C#</span>
-            <span>SQL Server</span>
-            <span>Azure DevOps</span>
-          </div>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <h3>Software Engineer Intern</h3>
-            <span>Cyber Village · 2022 — 2023</span>
-          </div>
-          <p class="timeline-body">
-            Supported client projects with responsive web builds and rapid prototyping.
-            Worked closely with designers to keep interfaces light, accessible, and
-            grounded in user feedback.
-          </p>
-          <ul class="timeline-highlights">
-            <li>Shipped reusable UI modules for content-heavy sites.</li>
-            <li>Improved page load performance by simplifying front-end assets.</li>
-            <li>Documented handover notes to ease client maintenance.</li>
-          </ul>
-          <div class="tag-row">
-            <span>React</span>
-            <span>JavaScript</span>
-            <span>HTML & CSS</span>
-            <span>Figma</span>
-          </div>
-        </article>
+        <div class="timeline" id="experience-list"></div>
       </section>
 
       <section class="section reveal" id="projects">
         <div class="section-heading">
-          <h2>Selected Projects</h2>
-          <p>Focused, narrative descriptions instead of a noisy grid.</p>
+          <h2>Project Deep Dives</h2>
+          <p>Engineering proof with diagrams, decisions, trade-offs, and improvements.</p>
         </div>
-        <div class="project-filters" role="group" aria-label="Filter projects by technology">
-          <button class="filter-button is-active" type="button" data-filter="all">All</button>
-          <button class="filter-button" type="button" data-filter=".net">.NET</button>
-          <button class="filter-button" type="button" data-filter="react">React</button>
-          <button class="filter-button" type="button" data-filter="sql">SQL</button>
-          <button class="filter-button" type="button" data-filter="java">Java</button>
-        </div>
-
-        <article class="project-row" data-tech="react html css">
-          <div class="project-header">
-            <div>
-              <h3>Portfolio Rebuild</h3>
-              <p class="project-subtitle">Personal · 2024</p>
-            </div>
-            <button class="project-toggle" type="button" aria-expanded="false">
-              View details
-            </button>
-          </div>
-          <div class="project-body" hidden>
-            <p>
-              A minimalist, mobile-first portfolio designed for clarity and calm reading with
-              subtle interaction cues and accessible navigation.
-            </p>
-            <ul>
-              <li>Refined typography scale to improve scanning on small screens.</li>
-              <li>Shifted layout to narrative sections for story-driven reading.</li>
-            </ul>
-            <div class="tag-row">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Accessibility</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-row" data-tech=".net sql">
-          <div class="project-header">
-            <div>
-              <h3>Trading Ops Helper</h3>
-              <p class="project-subtitle">Work · Placeholder</p>
-            </div>
-            <button class="project-toggle" type="button" aria-expanded="false">
-              View details
-            </button>
-          </div>
-          <div class="project-body" hidden>
-            <p>
-              A lightweight dashboard that keeps trading support teams aligned on daily
-              priorities. <strong>Placeholder:</strong> replace with your real project.
-            </p>
-            <ul>
-              <li>Summarized daily status updates for quick handovers.</li>
-              <li>Unified alerts from multiple systems into one view.</li>
-            </ul>
-            <div class="tag-row">
-              <span>.NET</span>
-              <span>API Integration</span>
-              <span>SQL</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Optional link</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-row" data-tech="java sql">
-          <div class="project-header">
-            <div>
-              <h3>Restaurant Ordering Prototype</h3>
-              <p class="project-subtitle">Academic · Placeholder</p>
-            </div>
-            <button class="project-toggle" type="button" aria-expanded="false">
-              View details
-            </button>
-          </div>
-          <div class="project-body" hidden>
-            <p>
-              A learning project exploring distributed ordering flows. <strong>Placeholder:</strong>
-              update with your actual outcomes.
-            </p>
-            <ul>
-              <li>Practiced request handling and data synchronization flows.</li>
-              <li>Documented system boundaries for clear team handover.</li>
-            </ul>
-            <div class="tag-row">
-              <span>Java</span>
-              <span>RMI</span>
-              <span>SQL</span>
-            </div>
-          </div>
-        </article>
+        <div class="project-deepdives" id="projects-list"></div>
       </section>
 
-      <section class="section reveal" id="mindset">
+      <section class="section reveal" id="leadership">
         <div class="section-heading">
-          <h2>How I Think</h2>
-          <p>Short, interactive cues that reflect how I approach engineering problems.</p>
+          <h2>Leadership & Community</h2>
+          <p>Initiatives that show initiative, communication, and people leadership.</p>
         </div>
-        <div class="mindset-grid">
-          <button class="mindset-item" type="button" aria-expanded="false">
-            <span>Systems first</span>
-            <span class="mindset-detail">Map dependencies early to reduce surprises later.</span>
-          </button>
-          <button class="mindset-item" type="button" aria-expanded="false">
-            <span>Data clarity</span>
-            <span class="mindset-detail">Make data shape and ownership explicit for reliability.</span>
-          </button>
-          <button class="mindset-item" type="button" aria-expanded="false">
-            <span>Measured delivery</span>
-            <span class="mindset-detail">Ship in small, verified steps to protect uptime.</span>
-          </button>
-          <button class="mindset-item" type="button" aria-expanded="false">
-            <span>Human-centered</span>
-            <span class="mindset-detail">Design for operators, not just for architecture diagrams.</span>
-          </button>
+        <div class="leadership-grid" id="leadership-list"></div>
+      </section>
+
+      <section class="section reveal" id="hobbies">
+        <div class="section-heading">
+          <h2>Hobbies & Interests</h2>
+          <p>Personal balance that fuels creativity, empathy, and resilience.</p>
         </div>
+        <div class="hobby-grid" id="hobby-list"></div>
       </section>
 
       <section class="section reveal" id="skills">
@@ -234,73 +81,15 @@
           <h2>Skills</h2>
           <p>Grouped for quick scanning, no ratings.</p>
         </div>
-        <div class="skills-grid">
-          <div>
-            <h3>Backend</h3>
-            <ul>
-              <li>.NET / C#</li>
-              <li>REST APIs</li>
-              <li>Microservices</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Frontend</h3>
-            <ul>
-              <li>React</li>
-              <li>HTML & CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Database</h3>
-            <ul>
-              <li>SQL Server</li>
-              <li>PostgreSQL</li>
-              <li>Data modeling</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Tools</h3>
-            <ul>
-              <li>Azure DevOps</li>
-              <li>GitHub</li>
-              <li>Docker</li>
-            </ul>
-          </div>
-        </div>
+        <div class="skills-grid" id="skills-list"></div>
       </section>
 
       <section class="section reveal" id="education">
         <div class="section-heading">
-          <h2>Education & Leadership</h2>
-          <p>Highlights that focus on growth and responsibility.</p>
+          <h2>Education</h2>
+          <p>Academic foundations and continual learning.</p>
         </div>
-
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <h3>Asia Pacific University</h3>
-            <span>BSc in Information Technology (Fintech) · 2021 — 2024</span>
-          </div>
-          <p class="timeline-body">
-            Built foundations in software engineering, data systems, and financial technology
-            applications while collaborating on team-based projects.
-          </p>
-        </article>
-
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <h3>Toastmasters President</h3>
-            <span>APU Toastmasters · 2023 — Present</span>
-          </div>
-          <p class="timeline-body">
-            Lead meeting planning, mentor new members, and create a supportive speaking
-            culture that helps members grow confidence.
-          </p>
-          <ul class="timeline-highlights">
-            <li>Coordinated weekly agendas and speaker line-ups.</li>
-            <li>Guided evaluation sessions for constructive feedback.</li>
-          </ul>
-        </article>
+        <div class="timeline" id="education-list"></div>
       </section>
 
       <section class="section contact reveal" id="contact">
@@ -308,11 +97,7 @@
           <h2>Contact</h2>
           <p>Let’s connect — open to software engineering roles and collaborations.</p>
         </div>
-        <div class="contact-card">
-          <p><strong>Email:</strong> anthony@example.com</p>
-          <p><strong>LinkedIn:</strong> linkedin.com/in/anthony-placeholder</p>
-          <p class="note">Replace placeholders with your actual contact details.</p>
-        </div>
+        <div class="contact-card" id="contact-card"></div>
       </section>
     </main>
 
