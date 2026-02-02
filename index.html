@@ -23,18 +23,19 @@
       <nav class="navbar">
         <div class="brand">AYWP</div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-section="about">About</a></li>
+          <li><a href="#experience" data-section="experience">Experience</a></li>
+          <li><a href="#projects" data-section="projects">Projects</a></li>
+          <li><a href="#mindset" data-section="mindset">How I Think</a></li>
+          <li><a href="#skills" data-section="skills">Skills</a></li>
+          <li><a href="#education" data-section="education">Education</a></li>
+          <li><a href="#contact" data-section="contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="about">
+      <section class="hero reveal" id="about">
         <p class="eyebrow">Software Engineer · .NET & Full-stack</p>
         <h1>Anthony Yeo Woon Pert</h1>
         <p class="intro">
@@ -42,13 +43,17 @@
           programs. I care about clean architecture, steady delivery, and making complex
           systems easy to use.
         </p>
+        <div class="typewriter" aria-live="polite">
+          <span>Focused on</span>
+          <span class="typewriter-text" data-phrases="reliable systems,clean data flows,thoughtful developer experience,performance-aware delivery">reliable systems</span>
+        </div>
         <div class="hero-actions">
           <a class="primary" href="#contact">Start a conversation</a>
           <a class="secondary" href="#projects">View projects</a>
         </div>
       </section>
 
-      <section class="section" id="experience">
+      <section class="section reveal" id="experience">
         <div class="section-heading">
           <h2>Experience</h2>
           <p>Story-driven highlights from roles across finance and tech communities.</p>
@@ -101,54 +106,130 @@
         </article>
       </section>
 
-      <section class="section" id="projects">
+      <section class="section reveal" id="projects">
         <div class="section-heading">
           <h2>Selected Projects</h2>
           <p>Focused, narrative descriptions instead of a noisy grid.</p>
         </div>
+        <div class="project-filters" role="group" aria-label="Filter projects by technology">
+          <button class="filter-button is-active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter=".net">.NET</button>
+          <button class="filter-button" type="button" data-filter="react">React</button>
+          <button class="filter-button" type="button" data-filter="sql">SQL</button>
+          <button class="filter-button" type="button" data-filter="java">Java</button>
+        </div>
 
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <h3>Portfolio Rebuild</h3>
-            <span>Personal · 2024</span>
+        <article class="project-row" data-tech="react html css">
+          <div class="project-header">
+            <div>
+              <h3>Portfolio Rebuild</h3>
+              <p class="project-subtitle">Personal · 2024</p>
+            </div>
+            <button class="project-toggle" type="button" aria-expanded="false">
+              View details
+            </button>
           </div>
-          <p class="timeline-body">A minimalist, mobile-first portfolio designed for clarity and calm reading.</p>
-          <ul class="timeline-highlights">
-            <li>Refined typography scale to improve scanning on small screens.</li>
-            <li>Rewrote layout to prioritize narrative flow over cards.</li>
-          </ul>
-          <div class="tag-row">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Accessibility</span>
+          <div class="project-body" hidden>
+            <p>
+              A minimalist, mobile-first portfolio designed for clarity and calm reading with
+              subtle interaction cues and accessible navigation.
+            </p>
+            <ul>
+              <li>Refined typography scale to improve scanning on small screens.</li>
+              <li>Shifted layout to narrative sections for story-driven reading.</li>
+            </ul>
+            <div class="tag-row">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Accessibility</span>
+            </div>
           </div>
         </article>
 
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <h3>Trading Ops Helper</h3>
-            <span>Work · Placeholder</span>
+        <article class="project-row" data-tech=".net sql">
+          <div class="project-header">
+            <div>
+              <h3>Trading Ops Helper</h3>
+              <p class="project-subtitle">Work · Placeholder</p>
+            </div>
+            <button class="project-toggle" type="button" aria-expanded="false">
+              View details
+            </button>
           </div>
-          <p class="timeline-body">
-            A lightweight dashboard that keeps trading support teams aligned on daily
-            priorities. <strong>Placeholder:</strong> replace with your real project.
-          </p>
-          <ul class="timeline-highlights">
-            <li>Summarized daily status updates for quick handovers.</li>
-            <li>Unified alerts from multiple systems into one view.</li>
-          </ul>
-          <div class="tag-row">
-            <span>.NET</span>
-            <span>API Integration</span>
-            <span>SQL</span>
+          <div class="project-body" hidden>
+            <p>
+              A lightweight dashboard that keeps trading support teams aligned on daily
+              priorities. <strong>Placeholder:</strong> replace with your real project.
+            </p>
+            <ul>
+              <li>Summarized daily status updates for quick handovers.</li>
+              <li>Unified alerts from multiple systems into one view.</li>
+            </ul>
+            <div class="tag-row">
+              <span>.NET</span>
+              <span>API Integration</span>
+              <span>SQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Optional link</a>
+            </div>
           </div>
-          <div class="project-links">
-            <a href="#">Optional link</a>
+        </article>
+
+        <article class="project-row" data-tech="java sql">
+          <div class="project-header">
+            <div>
+              <h3>Restaurant Ordering Prototype</h3>
+              <p class="project-subtitle">Academic · Placeholder</p>
+            </div>
+            <button class="project-toggle" type="button" aria-expanded="false">
+              View details
+            </button>
+          </div>
+          <div class="project-body" hidden>
+            <p>
+              A learning project exploring distributed ordering flows. <strong>Placeholder:</strong>
+              update with your actual outcomes.
+            </p>
+            <ul>
+              <li>Practiced request handling and data synchronization flows.</li>
+              <li>Documented system boundaries for clear team handover.</li>
+            </ul>
+            <div class="tag-row">
+              <span>Java</span>
+              <span>RMI</span>
+              <span>SQL</span>
+            </div>
           </div>
         </article>
       </section>
 
-      <section class="section" id="skills">
+      <section class="section reveal" id="mindset">
+        <div class="section-heading">
+          <h2>How I Think</h2>
+          <p>Short, interactive cues that reflect how I approach engineering problems.</p>
+        </div>
+        <div class="mindset-grid">
+          <button class="mindset-item" type="button" aria-expanded="false">
+            <span>Systems first</span>
+            <span class="mindset-detail">Map dependencies early to reduce surprises later.</span>
+          </button>
+          <button class="mindset-item" type="button" aria-expanded="false">
+            <span>Data clarity</span>
+            <span class="mindset-detail">Make data shape and ownership explicit for reliability.</span>
+          </button>
+          <button class="mindset-item" type="button" aria-expanded="false">
+            <span>Measured delivery</span>
+            <span class="mindset-detail">Ship in small, verified steps to protect uptime.</span>
+          </button>
+          <button class="mindset-item" type="button" aria-expanded="false">
+            <span>Human-centered</span>
+            <span class="mindset-detail">Design for operators, not just for architecture diagrams.</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section reveal" id="skills">
         <div class="section-heading">
           <h2>Skills</h2>
           <p>Grouped for quick scanning, no ratings.</p>
@@ -189,7 +270,7 @@
         </div>
       </section>
 
-      <section class="section" id="education">
+      <section class="section reveal" id="education">
         <div class="section-heading">
           <h2>Education & Leadership</h2>
           <p>Highlights that focus on growth and responsibility.</p>
@@ -222,7 +303,7 @@
         </article>
       </section>
 
-      <section class="section contact" id="contact">
+      <section class="section contact reveal" id="contact">
         <div class="section-heading">
           <h2>Contact</h2>
           <p>Let’s connect — open to software engineering roles and collaborations.</p>
@@ -239,5 +320,7 @@
       <p>© 2024 Anthony Yeo Woon Pert. Crafted with clarity and calm.</p>
       <a href="#about">Back to top</a>
     </footer>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
